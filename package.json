@@ -1,0 +1,23 @@
+{
+  "name": "soal-cb",
+  "version": "1.0.0",
+  "description": "### Belajar ngoding mengasyikan huhu haha",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rivzadrian/js-ex-w2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rivzadrian/js-ex-w2/issues"
+  },
+  "homepage": "https://github.com/rivzadrian/js-ex-w2#readme",
+  "dependencies": {
+    "axios": "^1.8.4"
+  }
+}
