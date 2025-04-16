@@ -9,7 +9,7 @@ function loginUser(inputUsername, inputPassword, callback){
         if (inputUsername === userDB.username && inputPassword === userDB.password){
             callback(userDB)
         }
-        else console.log("username salah");
+        else console.log("username atau password salah");
     }, 500);
 }
 
@@ -23,17 +23,21 @@ function getRole(user, callback){
 // cek role, jika admin lempar dashboard admin jika bukan admin
 function getMenu(role, callback){
     setTimeout(()=>{
-        getRole(user, function(user){
-            if (user === 'admin'){
-                console.log("Wilkommen to admin dashboard");
+        getRole(role, function(role){
+            if (role === 'admin'){
+                console.log("WILKOMMEN TO ADMIN DASHBOARD MY LORD");
             } 
+            else console.log("Welcome to normal people dashboard");
+            
         })
     },500);
 }
 
 loginUser("joko", "rahasia", function(user){
     loginUser(user.username, user.password, function(user){
-        getMenu()
+        getMenu(user, function(user){
+            console.log(user);
+        })
     })
 })
 
